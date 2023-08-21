@@ -11,9 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 @Table(name = "CLIENTI")
@@ -24,22 +22,14 @@ public class Cliente {
     private Long id;
 	
 	@Column(name = "nome_cliente")
-	@Max(20)
-	@Min(2)
-	@NotBlank
 	private String nome;
 	@Column(name = "cognome_cliente")
-	@Max(20)
-	@Min(2)
-	@NotBlank
 	private String cognome;
-	@NotBlank
+
 	@Column(unique=true)
 	private String email;
 	
 	@Column(unique = true)
-	@Max(10)
-	@Min(10)
 	private String cellulare;
 	
 	@OneToMany(mappedBy="cliente", fetch = FetchType.LAZY)

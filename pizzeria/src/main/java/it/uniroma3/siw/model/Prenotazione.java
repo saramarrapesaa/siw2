@@ -34,7 +34,7 @@ public class Prenotazione {
 	@Column(name= "commensali")
 	private int persone_per_prenotazione;
 	
-	@Max(40)
+	
 	@Column(name = "note")
 	private String nota;
 	

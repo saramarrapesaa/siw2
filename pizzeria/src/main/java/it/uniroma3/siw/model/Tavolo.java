@@ -23,7 +23,6 @@ public class Tavolo {
 	private Long id;
 	
 	@Column(name="numero_tavolo", unique= true)
-	@NotBlank
 	private int numeTavolo;
 	
 	private int posti;
